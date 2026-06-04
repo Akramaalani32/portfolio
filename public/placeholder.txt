@@ -1,0 +1,14 @@
+Place tes screenshots ici.
+Exemple :
+  public/screenshots/quickshop.png
+  public/screenshots/afristream.png
+  public/screenshots/boostly.png
+
+Dans Projects.tsx, remplace <ProjectMockup> par :
+  <Image
+    src='/screenshots/quickshop.png'
+    alt='QuickShop screenshot'
+    width={600} height={340}
+    className='rounded-xl w-full object-cover'
+    style={{ marginBottom: 20 }}
+  />

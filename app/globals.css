@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0A08;
+  color: #EDE8DF;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0B0A08; }
+::-webkit-scrollbar-thumb { background: #2A2420; border-radius: 3px; }
+
+/* ─── CSS Animations (remplace framer-motion pour le Hero) ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* Classes utilitaires pour les animations du Hero */
+.anim-hero { animation: fadeInUp 0.65s cubic-bezier(0.16,1,0.3,1) forwards; opacity: 0; }
+.anim-nav  { animation: fadeInDown 0.5s cubic-bezier(0.16,1,0.3,1) forwards; opacity: 0; }
+.anim-pulse { animation: pulse 2s infinite; }
+
+.delay-0   { animation-delay: 0s; }
+.delay-1   { animation-delay: 0.1s; }
+.delay-2   { animation-delay: 0.2s; }
+.delay-3   { animation-delay: 0.3s; }
+.delay-4   { animation-delay: 0.45s; }
+.delay-5   { animation-delay: 0.55s; }
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hidden-mobile  { display: none !important; }
+  .show-mobile    { display: flex !important; }
+  .hero-grid      { grid-template-columns: 1fr !important; }
+  .projects-grid  { grid-template-columns: 1fr !important; }
+  .about-grid     { grid-template-columns: 1fr !important; }
+  .contact-btns   { flex-direction: column !important; align-items: center !important; }
+  .footer-bar     { flex-direction: column !important; text-align: center !important; }
+}

@@ -57,6 +57,21 @@ body {
   .hero-grid      { grid-template-columns: 1fr !important; }
   .projects-grid  { grid-template-columns: 1fr !important; }
   .about-grid     { grid-template-columns: 1fr !important; }
+
+  /* Ajustements spécifiques pour le texte dans la grille Hero sur mobile */
+  .hero-grid h1,
+  .hero-grid h2 {
+    /* Réduit la taille de la police pour les titres principaux sur mobile */
+    font-size: clamp(2.5rem, 7vw, 3.2rem) !important;
+    line-height: 1.1 !important; /* Ajuste l'interligne pour une meilleure lisibilité */
+    word-break: break-word; /* Permet aux mots longs de se couper */
+    overflow-wrap: break-word; /* Alternative moderne pour la coupure de mots */
+  }
+  .hero-grid p {
+    max-width: 100% !important; /* S'assure que les paragraphes utilisent toute la largeur disponible */
+    word-break: break-word; /* Permet aux mots longs de se couper */
+    overflow-wrap: break-word; /* Alternative moderne pour la coupure de mots */
+  }
   .contact-btns   { flex-direction: column !important; align-items: center !important; }
   .footer-bar     { flex-direction: column !important; text-align: center !important; }
 }

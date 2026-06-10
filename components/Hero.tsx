@@ -59,8 +59,9 @@ export default function Hero() {
             {/* Main headline */}
             <motion.h1 {...fadeUp(0.1)} style={{
               fontFamily: FONTS.heading, fontWeight: 800,
-              fontSize: 'clamp(3.2rem, 8vw, 6.8rem)',
+              fontSize: 'clamp(2.2rem, 10vw, 6.8rem)',
               lineHeight: 0.92, letterSpacing: '-0.04em', color: C.text,
+              overflowWrap: 'break-word',
             }}>
               Full-Stack<br />
               <span style={{ color: C.accent }}>Developer</span>
@@ -69,7 +70,7 @@ export default function Hero() {
 
             {/* Tagline */}
             <motion.p {...fadeUp(0.2)} style={{
-              color: C.muted, maxWidth: 520, lineHeight: 1.75,
+              color: C.muted, maxWidth: 'min(520px, 100%)', lineHeight: 1.75,
               fontSize: '1.05rem', fontFamily: FONTS.body, fontWeight: 300, marginTop: 24,
             }}>
               Je construis des produits digitaux de A à Z —{' '}
